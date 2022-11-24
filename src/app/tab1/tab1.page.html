@@ -6,13 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card color="primary">
+<ion-content [fullscreen]="true" color="primary">
+  <ion-card>
     <ion-card-header>
       <ion-card-title>Bem-vindos!</ion-card-title>
     </ion-card-header>
+    <ion-button expand="block" [routerLink]="['/login']" routerLinkActive="router-link-active" fill="clear">Login</ion-button>
+    <ion-button expand="block" [routerLink]="['/registro']" routerLinkActive="router-link-active" fill="clear">Registro</ion-button>
   </ion-card>
 
-  <ion-button expand="block">Login</ion-button>
-  <ion-button expand="full">Registro</ion-button>
+
 </ion-content>
