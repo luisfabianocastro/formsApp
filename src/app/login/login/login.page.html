@@ -6,6 +6,36 @@
 
 <ion-content>
 
+  <form [formGroup]="formRegistro">
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="Digite seu email" formControlName="email"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.email">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('email').hasError(erro.tipo) && (formRegistro.get('email').dirty || formRegistro.get('email').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input placeholder="Digite sua senha" type="password" formControlName="senha"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.senha">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('senha').hasError(erro.tipo) && (formRegistro.get('senha').dirty || formRegistro.get('senha').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-button expand="block" (click)="salvarRegistro()">Entrar</ion-button>
+
+    <br>
+
+    </form>
+
   <br>
 
   <ion-button expand="block" [routerLink]="['/tabs/tab1']" routerLinkActive="router-link-active">Voltar</ion-button>
