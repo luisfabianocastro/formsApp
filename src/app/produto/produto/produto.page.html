@@ -6,4 +6,60 @@
 
 <ion-content>
 
+  <form [formGroup]="formRegistro">
+
+    <ion-item>
+      <ion-label position="floating">Nome do produto</ion-label>
+      <ion-input placeholder="Digite o nome do produto" formControlName="nome"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.nome">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('nome').hasError(erro.tipo) && (formRegistro.get('nome').dirty || formRegistro.get('nome').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descrição do produto</ion-label>
+      <ion-input placeholder="Digite a descrição do produto" formControlName="email"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.email">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('email').hasError(erro.tipo) && (formRegistro.get('email').dirty || formRegistro.get('email').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Validade do produto</ion-label>
+      <ion-input placeholder="Digite a validade do produto" formControlName="senha"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.senha">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('senha').hasError(erro.tipo) && (formRegistro.get('senha').dirty || formRegistro.get('senha').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Preço do produto</ion-label>
+      <ion-input placeholder="Digite o preço do produto" formControlName="senha2"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.senha2">
+        <span class="msg-erro"
+        *ngIf="formRegistro.get('senha2').hasError(erro.tipo) && (formRegistro.get('senha2').dirty || formRegistro.get('senha2').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <br>
+
+  </form>
+
+    <ion-button expand="block" (click)="salvarProduto()">Salvar</ion-button>
+
+    <br>
+
+    <ion-button expand="block" [routerLink]="['/tabs/tab1']" routerLinkActive="router-link-active">Voltar</ion-button>
+
 </ion-content>
