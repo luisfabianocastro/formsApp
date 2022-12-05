@@ -32,10 +32,19 @@
 
     <ion-button expand="block" (click)="salvarRegistro()">Entrar</ion-button>
 
-    </form>
+  </form>
 
   <br>
 
-  <ion-button expand="block" [routerLink]="['/tabs/tab1']" routerLinkActive="router-link-active">Voltar</ion-button>
+  <ion-button expand="block" [routerLink]="['/registro']" routerLinkActive="router-link-active">Registrar</ion-button>
+
+  <br>
+
+  <ion-button expand="block">Esqueceu a senha</ion-button>
+
+  <br>
+
+  <ion-button type="small" [routerLink]="['/tabs/tab1']" routerLinkActive="router-link-active">Voltar</ion-button>
+
 
 </ion-content>
