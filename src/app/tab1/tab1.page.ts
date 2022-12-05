@@ -9,16 +9,6 @@ import { Usuario } from '../models/Usuario';
 })
 export class Tab1Page {
 
-  listaUsuarios: Usuario[] = [];
-
   constructor(private storageService: StorageService) {}
-
-  async buscarUsuarios(){
-    this.listaUsuarios = await this.storageService.getAll();
-  }
-
-  ionViewDidEnter(){
-    this.buscarUsuarios();
-  }
 
 }

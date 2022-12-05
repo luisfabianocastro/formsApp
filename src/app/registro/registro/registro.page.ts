@@ -18,12 +18,12 @@ export class RegistroPage implements OnInit {
 
   mensagens = {
     nome: [
-      { tipo: 'required', mensagem: 'O campo Nome é obrigatório!' },
-      { tipo: 'minlength', mensagem: 'O campo Nome precisa ter pelo menos 3 caracteres!' }
+      { tipo: 'required', mensagem: 'O campo Nome é obrigatório.' },
+      { tipo: 'minlength', mensagem: 'O campo Nome precisa ter pelo menos 3 caracteres.' }
     ],
     cpf:[
-      { tipo: 'required', mensagem: 'O campo CPF é obrigatório!' },
-      { tipo: 'invalido', mensagem: 'CPF inválido!'}
+      { tipo: 'required', mensagem: 'O campo CPF é obrigatório.' },
+      { tipo: 'invalido', mensagem: 'CPF inválido.'}
     ],
     email: [
       { tipo: 'required', mensagem: 'O campo Email é obrigatório.' },
@@ -64,7 +64,7 @@ export class RegistroPage implements OnInit {
       this.usuario.email = this.formRegistro.value.email;
       this.usuario.senha = this.formRegistro.value.senha;
       await this.storageService.set(this.usuario.email, this.usuario);
-      this.route.navigateByUrl('/home');
+      this.route.navigateByUrl('/tabs/tab1');
     } else{
       alert('Formulário inválido!');
     }

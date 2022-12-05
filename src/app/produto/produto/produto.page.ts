@@ -12,19 +12,19 @@ export class ProdutoPage implements OnInit {
 
   mensagens = {
     nome: [
-      { tipo: 'required', mensagem: 'O campo Nome do Produto é obrigatório!' },
-      { tipo: 'minlength', mensagem: 'O campo Nome do Produto precisa ter pelo menos 3 caracteres!' }
+      { tipo: 'required', mensagem: 'O campo Nome do Produto é obrigatório.' },
+      { tipo: 'minlength', mensagem: 'O campo Nome do Produto precisa ter pelo menos 3 caracteres.' }
     ],
     email: [
-      { tipo: 'required', mensagem: 'O campo Descrição é obrigatório.' },
-      { tipo: 'minlength', mensagem: 'O campo Descrição precisa ter pelo menos 3 caracteres!' },
+      { tipo: 'required', mensagem: 'O campo Descrição do Produto é obrigatório.' },
+      { tipo: 'minlength', mensagem: 'O campo Descrição precisa ter pelo menos 3 caracteres.' },
     ],
     senha: [
       { tipo: 'required', mensagem: 'É obrigatório informar a validade do produto' },
       { tipo: 'minlength', mensagem: 'A validade deve ter pelo menos 6 caracteres.' },
     ],
     senha2: [
-      { tipo: 'required', mensagem: 'O campo Preço é obrigatório' },
+      { tipo: 'required', mensagem: 'O campo Preço do Produto é obrigatório.' },
       { tipo: 'minlength', mensagem: 'O preço deve ter pelo menos 4 caracteres.' },
     ],
   };
